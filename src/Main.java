@@ -1,8 +1,12 @@
+import model.Creature;
 
 public class Main {
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
+		
+
+		Creature creature1 = new Creature();
 
 	}
 
