@@ -1,6 +1,7 @@
 package model;
 
-public class Creature {
+public class Creature extends Race {
+	private Type type;
 	private Race race;
 	private String abilities;
 	private String profession;

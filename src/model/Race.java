@@ -1,6 +1,6 @@
 package model;
 
-public class Race {
+public class Race extends Type {
 
 	private Type type;
 	private String raceName;
