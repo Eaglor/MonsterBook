@@ -1,26 +1,26 @@
 package model;
 
 public class Type {
-	private String typeName;
+	private String type;
 	private String typeDescription;
 	private String typePerks;
 	private String typeWeakness;
 	private String typeSkill;
 
 	public Type() {
-		this.typeName = typeName;
-		this.typeDescription = typeDescription;
-		this.typePerks = typePerks;
-		this.typeWeakness = typeWeakness;
-		this.typeSkill = typeSkill;
+		this.type = type;
+//		this.typeDescription = typeDescription;
+//		this.typePerks = typePerks;
+//		this.typeWeakness = typeWeakness;
+//		this.typeSkill = typeSkill;
 	}
 
 	public String getTypeName() {
-		return typeName;
+		return type;
 	}
 
 	public void setTypeName(String typeName) {
-		this.typeName = typeName;
+		this.type = typeName;
 	}
 
 	public String getTypeDescription() {
@@ -54,5 +54,9 @@ public class Type {
 	public void setTypeSkill(String typeSkill) {
 		this.typeSkill = typeSkill;
 	}
-
+	
+	@Override
+	public String toString() {
+		return type;
+	}
 }

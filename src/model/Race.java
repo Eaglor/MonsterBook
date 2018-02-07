@@ -3,15 +3,15 @@ package model;
 public class Race extends Type {
 
 	private Type type;
-	private String raceName;
+	private String race;
 	private String raceDescription;
 	private String raceSkill;
 
 	public Race() {
 		this.type = type;
-		this.raceName = raceName;
-		this.raceDescription = raceDescription;
-		this.raceSkill = raceSkill;
+		this.race = race;
+//		this.raceDescription = raceDescription;
+//		this.raceSkill = raceSkill;
 	}
 
 	public Type getType() {
@@ -23,11 +23,11 @@ public class Race extends Type {
 	}
 
 	public String getRaceName() {
-		return raceName;
+		return race;
 	}
 
 	public void setRaceName(String raceName) {
-		this.raceName = raceName;
+		this.race = raceName;
 	}
 
 	public String getRaceDescription() {
@@ -44,6 +44,11 @@ public class Race extends Type {
 
 	public void setRaceSkill(String raceSkill) {
 		this.raceSkill = raceSkill;
+	}
+	
+	@Override
+	public String toString() {
+		return race;
 	}
 
 }

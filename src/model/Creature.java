@@ -1,17 +1,23 @@
 package model;
 
+import java.util.HashMap;
+
 public class Creature extends Race {
 	private Type type;
 	private Race race;
+	private String name;
 	private String abilities;
 	private String profession;
 	private String skills;
+	private String creature;
 
-	public Creature() {
+	public Creature(Type type, Race race, String name) {
+		this.type = type;
 		this.race = race;
-		this.abilities = abilities;
-		this.profession = profession;
-		this.skills = skills;
+		this.name = name;
+		// this.abilities = abilities;
+		// this.profession = profession;
+		// this.skills = skills;
 	}
 
 	public Race getRace() {
@@ -20,6 +26,14 @@ public class Creature extends Race {
 
 	public void setRace(Race race) {
 		this.race = race;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String creatureName) {
+		this.name = creatureName;
 	}
 
 	public String getAbilities() {
@@ -46,4 +60,17 @@ public class Creature extends Race {
 		this.skills = skills;
 	}
 
+	@Override
+	public String toString() {
+		return name;
+	}
+
+	public boolean checkIfCreatedCreatureExcist(Creature creature) {
+		if (creature == null) {
+			creature = creature;
+			return true;
+		} else {
+			return false;
+		}
+	}
 }
