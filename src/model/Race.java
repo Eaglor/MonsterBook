@@ -1,13 +1,14 @@
 package model;
 
-public class Race extends Type {
+//Tog bort arvet Type i.o.m. att det blev problem med att skapa ett Type-värde som kan anropas till alla ras-klasser med samma Type.
+public class Race{
 
 	private Type type;
 	private String race;
 	private String raceDescription;
 	private String raceSkill;
 
-	public Race() {
+	public Race(Type type, String race) {
 		this.type = type;
 		this.race = race;
 //		this.raceDescription = raceDescription;
@@ -17,7 +18,12 @@ public class Race extends Type {
 	public Type getType() {
 		return type;
 	}
-
+	
+	//TypeName tillgänglig via Race istället
+	public String getTypeName() {
+		return type.getTypeName();
+	}
+	
 	public void setType(Type type) {
 		this.type = type;
 	}
@@ -26,8 +32,8 @@ public class Race extends Type {
 		return race;
 	}
 
-	public void setRaceName(String raceName) {
-		this.race = raceName;
+	public void setRaceName(String race) {
+		this.race = race;
 	}
 
 	public String getRaceDescription() {
@@ -46,9 +52,4 @@ public class Race extends Type {
 		this.raceSkill = raceSkill;
 	}
 	
-	@Override
-	public String toString() {
-		return race;
-	}
-
 }

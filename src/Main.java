@@ -21,13 +21,13 @@ public class Main {
 		//controll
 		//view
 		
-		Type svartfolk = new Type();
-		Race orch = new Race();
+		Type svartfolk = new Type("Svartfolk");
+		Race orch = new Race(svartfolk, "Orch");
 		
-		Race troll = new Race();
+		Race troll = new Race(svartfolk, "Troll");
 		
-		Creature gritus = new Creature(svartfolk, orch, "Gritus");
-		Creature whitecap = new Creature(svartfolk, troll, "whitecap");
+		Creature gritus = new Creature(orch, "Gritus");
+		Creature whitecap = new Creature(troll, "Fingersvamp");
 		
 		
 		

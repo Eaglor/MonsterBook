@@ -7,7 +7,7 @@ public class Type {
 	private String typeWeakness;
 	private String typeSkill;
 
-	public Type() {
+	public Type(String type) {
 		this.type = type;
 //		this.typeDescription = typeDescription;
 //		this.typePerks = typePerks;
@@ -55,8 +55,4 @@ public class Type {
 		this.typeSkill = typeSkill;
 	}
 	
-	@Override
-	public String toString() {
-		return type;
-	}
 }
