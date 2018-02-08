@@ -1,3 +1,6 @@
+import factory.CreatureFactory;
+import factory.OrchFactory;
+import factory.TrollFactory;
 import model.*;
 
 public class Main {
@@ -27,12 +30,20 @@ public class Main {
 		Race troll = new Race(svartfolk, "Troll");
 		
 		Creature gritus = new Creature(orch, "Gritus");
-		Creature whitecap = new Creature(troll, "Fingersvamp");
-		
-		
+		Creature krutus = new Creature(troll, "Krutus");
 		
 		System.out.println(gritus);
-		System.out.println(whitecap);
+		System.out.println(krutus);
+		
+		//alt. Factory
+		CreatureFactory orchFactory = new OrchFactory();
+		CreatureFactory trollFactory = new TrollFactory();
+		
+		Creature vredfolk = orchFactory.create("Vredfolk");
+		Creature storhamre = trollFactory.create("Storhamre");
+		
+		System.out.println(vredfolk);
+		System.out.println(storhamre);
 		
 		}
 }
